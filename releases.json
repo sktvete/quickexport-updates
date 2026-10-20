@@ -1,0 +1,288 @@
+{
+  "product": "QuickExport",
+  "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
+  "releases": [
+    {
+      "version": "4.11.484",
+      "date": "2026-10-20",
+      "title": "Leaner shader graphs and faster instancers",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Hue/Saturation/Value becomes a single Arnold color-correct node for any color range."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Image textures read their own UV set directly, so UV Map nodes no longer add extra Maya nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Displacement now drives Arnold scalar displacement along the object normal, with Midlevel as the zero point."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Shared texture placement nodes are labelled with the Blender Mapping node they come from."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Point instancers from scene transfers build much faster on large scatters."}
+      ]
+    },
+    {
+      "version": "4.11.483",
+      "date": "2026-10-20",
+      "title": "Snappier import progress",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Import progress no longer forces a viewport redraw on every update, so big imports finish sooner."}
+      ]
+    },
+    {
+      "version": "4.11.482",
+      "date": "2026-10-19",
+      "title": "Tidier instancing groups",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "PointClouds and Prototypes helper groups are hidden as groups, so their contents stay visible when you need them."}
+      ]
+    },
+    {
+      "version": "4.11.481",
+      "date": "2026-10-19",
+      "title": "Shader accuracy pass",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Gamma matches Cycles for linked and negative inputs (Gamma 0 renders white, as in Blender)."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Subsurface color is left unconnected when Subsurface Weight is 0, avoiding needless nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Every rebuilt Maya shading node is tagged with the Blender node it reproduces."},
+        {"type": "improved", "hosts": ["Maya"], "text": "An identity Mapping node passes its vector straight through instead of adding nodes."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Missing-image Alpha placeholders can be connected again."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Static scatter particles no longer behave like dynamics on timeline changes."}
+      ]
+    },
+    {
+      "version": "4.11.480",
+      "date": "2026-10-19",
+      "title": "Cleaner math and steadier progress",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Float math stays single-channel and colors convert per node, giving smaller, more faithful graphs."},
+        {"type": "improved", "hosts": ["Blender"], "text": "Export Dismiss is now a compact icon so stage labels fit."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "Export progress only moves forward across phases."}
+      ]
+    },
+    {
+      "version": "4.11.479",
+      "date": "2026-10-19",
+      "title": "Keep scene materials",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Keep scene materials skips rebuilding materials for kept objects and retains their full upstream graph."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "The import confirmation dialog closes before the import starts."}
+      ]
+    },
+    {
+      "version": "4.11.477",
+      "date": "2026-10-19",
+      "title": "Split-material instancing",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Geometry Nodes prototypes split by material become a single group instancer."}
+      ]
+    },
+    {
+      "version": "4.11.475",
+      "date": "2026-10-19",
+      "title": "Object instance prototypes",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Each Geometry Nodes Object reference keeps its own prototype instead of collapsing into one."}
+      ]
+    },
+    {
+      "version": "4.11.474",
+      "date": "2026-10-19",
+      "title": "Exact native instancing",
+      "items": [
+        {"type": "new", "hosts": ["Maya"], "text": "Every Geometry Nodes mesh occurrence is instanced natively in Maya, with no placed mesh copies."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Instancer shear and collapsed scales carry over exactly."}
+      ]
+    },
+    {
+      "version": "4.11.473",
+      "date": "2026-10-19",
+      "title": "Volumes and instancing owners",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Principled Volume connects to the shading group's Volume Shader slot."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Imported instancing owners are grouped under a plain transform."}
+      ]
+    },
+    {
+      "version": "4.11.471",
+      "date": "2026-10-19",
+      "title": "Smoother re-imports",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Imports go straight through when nothing from the previous import is left in the scene."}
+      ]
+    },
+    {
+      "version": "4.11.470",
+      "date": "2026-10-19",
+      "title": "No stray selection sets",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Static scene transfers no longer create selection sets."}
+      ]
+    },
+    {
+      "version": "4.11.467",
+      "date": "2026-10-19",
+      "title": "Cleaner Maya panel",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Removed helper-text labels from the scene transfer panel."}
+      ]
+    },
+    {
+      "version": "4.11.466",
+      "date": "2026-10-19",
+      "title": "No role display layers",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Static scene transfers no longer add role display layers to your scene."}
+      ]
+    },
+    {
+      "version": "4.11.464",
+      "date": "2026-10-19",
+      "title": "Scene transfer is out of Experimental",
+      "items": [
+        {"type": "improved", "hosts": ["Blender", "Maya"], "text": "Maya scene transfers drop the Experimental label."},
+        {"type": "improved", "hosts": ["Blender"], "text": "The UV option is now called Skip Inactive UV Maps."}
+      ]
+    },
+    {
+      "version": "4.11.463",
+      "date": "2026-10-19",
+      "title": "Replace on first import",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Scene transfers replace same-named Maya objects on first import, just like FBX."}
+      ]
+    },
+    {
+      "version": "4.11.462",
+      "date": "2026-10-19",
+      "title": "Import dialog refresh",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Import dialog gains an Advanced section and a clearer script path layout."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Editable Rig imports show Importing Geometry while geometry loads."},
+        {"type": "new", "hosts": ["Blender"], "text": "New Include FBX Option preference (off by default)."}
+      ]
+    },
+    {
+      "version": "4.11.461",
+      "date": "2026-10-19",
+      "title": "Simpler export settings",
+      "items": [
+        {"type": "improved", "hosts": ["Blender"], "text": "Maya export settings are simplified: rarely changed options are locked to sensible defaults."}
+      ]
+    },
+    {
+      "version": "4.11.460",
+      "date": "2026-10-19",
+      "title": "Native Noise",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Noise Texture distortion uses Arnold's own noise distortion."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Distorted and fractional-detail Noise rebuild from a couple of native nodes instead of large math networks."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Scalar graph results skip an unnecessary color conversion."}
+      ]
+    },
+    {
+      "version": "4.11.458",
+      "date": "2026-10-19",
+      "title": "Native shader graph overhaul",
+      "items": [
+        {"type": "new", "hosts": ["Blender"], "text": "Shader Editor highlights which nodes convert to Maya, with per-node support notes and partial conversions marked yellow."},
+        {"type": "new", "hosts": ["Blender"], "text": "New QuickExport World panel in Properties > World."},
+        {"type": "new", "hosts": ["Maya"], "text": "Shared meshes arrive as native Maya point instancers."},
+        {"type": "new", "hosts": ["Maya"], "text": "Object Info Random carries over for objects and instances."},
+        {"type": "new", "hosts": ["Maya"], "text": "Editable rebuilds for Wave, Radial gradient, Voronoi, Checker, RGB Curves, Clamp, Map Range (all modes), Fresnel and Layer Weight."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Normal Map, Bump and Displacement chains rebuild as one native graph; Bump distance respects scene units."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Mix and Add Shader trees convert as nested closures, keeping their factors and transparency."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Noise fBM rebuilds as a single native Arnold noise node; constant nodes are folded away."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Textures follow the Blender image color space, including on data sockets."},
+        {"type": "improved", "hosts": ["Blender", "Maya"], "text": "Orthographic camera framing and lens shift survive the transfer."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Geometry is kept when an individual material fails to convert."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Long Windows texture paths no longer break Arnold texture conversion."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "Invalid imports cancel with a clear warning."},
+        {"type": "fixed", "hosts": ["Blender", "Maya"], "text": "Isolated mesh vertices are kept without turning into rendered spheres."}
+      ]
+    },
+    {
+      "version": "4.11.441",
+      "date": "2026-10-17",
+      "title": "Mark Asset placement",
+      "items": [
+        {"type": "fixed", "hosts": ["Blender"], "text": "Mark Asset keeps geometry and hierarchy across every placement mode."},
+        {"type": "improved", "hosts": ["Blender"], "text": "Mark Asset is faster on large selections."}
+      ]
+    },
+    {
+      "version": "4.11.422",
+      "date": "2026-10-16",
+      "title": "Editable Rig by default",
+      "items": [
+        {"type": "improved", "hosts": ["Blender"], "text": "Maya Rigged exports default to Editable Rig."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "Material exports complete reliably even without progress updates."}
+      ]
+    },
+    {
+      "version": "4.11.420",
+      "date": "2026-10-16",
+      "title": "Selection fix",
+      "items": [
+        {"type": "fixed", "hosts": ["Blender"], "text": "Selection works on Windows systems that don't report their architecture."}
+      ]
+    },
+    {
+      "version": "4.11.418",
+      "date": "2026-10-16",
+      "title": "Procedural colors",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Mixed procedural colors and the source BSDF behaviour are preserved."}
+      ]
+    },
+    {
+      "version": "4.11.416",
+      "date": "2026-10-16",
+      "title": "Material preservation",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Unshaded subgroup markers no longer interfere with preserved materials."}
+      ]
+    },
+    {
+      "version": "4.11.415",
+      "date": "2026-10-16",
+      "title": "Bundled preview lighting",
+      "items": [
+        {"type": "new", "hosts": ["Blender"], "text": "Review and studio previews use a bundled HDRI, so no download is needed."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Per-face shading assignments survive ordinary replacement."}
+      ]
+    },
+    {
+      "version": "4.11.414",
+      "date": "2026-10-16",
+      "title": "Name collision safety",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Materials and hierarchy are preserved when FBX meshes and bones share names."}
+      ]
+    },
+    {
+      "version": "4.11.412",
+      "date": "2026-10-16",
+      "title": "Safer FBX overwrites",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "FBX overwrite resolves object names without grabbing matching rig joints."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Children keep their exact place in the hierarchy during FBX replacement."}
+      ]
+    }
+  ],
+  "archive": [
+    {
+      "range": "4.11.340 – 4.11.410",
+      "dates": "Oct 15 – 16, 2026",
+      "summary": "Blender normals transfer by default, scene World/HDRI transfer to Maya, Mark Asset for all object types, shared export naming, unused-shader pruning, uncompressed transfers for speed, Editable Rig packages importable back into Blender, and faster Blender and Maya startup."
+    },
+    {
+      "range": "4.11.280 – 4.11.339",
+      "dates": "Oct 13 – 14, 2026",
+      "summary": "Transfer progress on the matching Blender button, preserved USD subdivision schemes, editable volume density shaders, Cycles-matched skin SSS, safer rig overwrites and animation fixes, and clearer Maya FBX vs scene-transfer guidance."
+    },
+    {
+      "range": "4.11.100 – 4.11.279",
+      "dates": "Oct 8 – 12, 2026",
+      "summary": "New Maya scene transfer with evaluated geometry, animated native rig transfer, reviewed partial rig export, rig control colors in Maya, editable procedural shader graphs in Arnold, Blender-style collapsible export settings, and no more _S material suffixes."
+    },
+    {
+      "range": "4.11.0 – 4.11.99",
+      "dates": "Sep – Oct 7, 2026",
+      "summary": "FBX subgroup replacement with rollback, shape-key baking on export, Arnold ColorRamp and specular fixes, ZBrush workflow fixes, Maya setup and update-flow improvements, and preserved face materials on linked meshes."
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuickExport Updates</title>
+<meta name="description" content="What's new in QuickExport, the one-click Blender ↔ Maya converter.">
+<link rel="alternate" type="application/atom+xml" title="QuickExport Updates" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e8732c'/%3E%3Cpath d='M9 16h11m-4-5 5 5-5 5' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #f7f6f3; --surface: #ffffff; --surface-2: #f0eee9; --text: #1d1c1a; --muted: #6b6862;
+  --border: #e3e0d9; --accent: #e8732c; --accent-ink: #ffffff;
+  --new: #2f7d4f; --new-bg: #e3f3e8; --improved: #2f5fb3; --improved-bg: #e4ecfa;
+  --fixed: #a3561b; --fixed-bg: #f8eadf; --blender: #e87d0d; --maya: #1aa3a3;
+  --shadow: 0 1px 2px rgb(0 0 0 / .04), 0 4px 16px rgb(0 0 0 / .04);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --surface: #1d1c1a; --surface-2: #262522; --text: #ecebe7; --muted: #9c9890;
+    --border: #33312d; --accent: #f08a47; --accent-ink: #141413;
+    --new: #7fd09c; --new-bg: #1d3326; --improved: #8fb2f0; --improved-bg: #1d2738;
+    --fixed: #f0b07f; --fixed-bg: #3a281b; --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141413; --surface: #1d1c1a; --surface-2: #262522; --text: #ecebe7; --muted: #9c9890;
+  --border: #33312d; --accent: #f08a47; --accent-ink: #141413;
+  --new: #7fd09c; --new-bg: #1d3326; --improved: #8fb2f0; --improved-bg: #1d2738;
+  --fixed: #f0b07f; --fixed-bg: #3a281b; --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+header.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 650; letter-spacing: -.01em; }
+.logo { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: grid; place-items: center; }
+.icon-btn {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 999px; height: 36px; padding: 0 14px; font: inherit; font-size: 14px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+}
+.icon-btn:hover { border-color: var(--muted); }
+.actions { display: flex; gap: 8px; }
+.hero { padding: 40px 0 32px; }
+.eyebrow { color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.05; letter-spacing: -.03em; margin: 10px 0 12px; }
+.hero h1 .v { color: var(--accent); }
+.hero p { color: var(--muted); margin: 0; max-width: 600px; font-size: 18px; }
+.latest { margin-top: 18px; display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; color: var(--muted); font-size: 14px; }
+.pill { background: var(--surface); border: 1px solid var(--border); padding: 4px 10px; border-radius: 999px; }
+.controls {
+  position: sticky; top: 0; z-index: 2; background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px); padding: 12px 0; border-bottom: 1px solid var(--border); margin-bottom: 24px;
+}
+.controls .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.search {
+  flex: 1 1 220px; min-width: 0; height: 38px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); padding: 0 12px; font: inherit; font-size: 15px;
+}
+.search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.seg { display: inline-flex; background: var(--surface-2); border-radius: 10px; padding: 3px; }
+.seg button {
+  border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 14px;
+  padding: 6px 11px; border-radius: 8px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+.count { color: var(--muted); font-size: 13px; margin-top: 8px; }
+.release {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 20px 22px; margin-bottom: 14px; box-shadow: var(--shadow);
+}
+.release header { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.release h2 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
+.release h2 a { color: inherit; text-decoration: none; }
+.release h2 a:hover { color: var(--accent); }
+.ver { font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 500; font-size: 15px; margin-right: 6px; }
+.date { color: var(--muted); font-size: 14px; white-space: nowrap; }
+.release ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.release li { display: grid; grid-template-columns: 82px 1fr; gap: 10px; align-items: start; }
+.tag { font-size: 12px; font-weight: 600; text-align: center; border-radius: 6px; padding: 2px 0; margin-top: 2px; }
+.tag.new { color: var(--new); background: var(--new-bg); }
+.tag.improved { color: var(--improved); background: var(--improved-bg); }
+.tag.fixed { color: var(--fixed); background: var(--fixed-bg); }
+.hosts { display: inline-flex; gap: 6px; margin-left: 6px; vertical-align: 1px; }
+.host { font-size: 11px; font-weight: 600; letter-spacing: .02em; padding: 0 6px; border-radius: 4px; border: 1px solid; }
+.host.Blender { color: var(--blender); }
+.host.Maya { color: var(--maya); }
+mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: inherit; border-radius: 3px; }
+.archive h3 { margin: 40px 0 12px; font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.archive .release p { margin: 10px 0 0; color: var(--muted); }
+.empty { text-align: center; color: var(--muted); padding: 40px 0; }
+footer { color: var(--muted); font-size: 13px; padding: 40px 0 60px; text-align: center; }
+footer a { color: inherit; }
+@media (max-width: 540px) {
+  .release { padding: 16px; }
+  .release li { grid-template-columns: 1fr; gap: 4px; }
+  .tag { justify-self: start; padding: 2px 8px; }
+  .icon-btn .lbl { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="logo"><svg width="16" height="16" viewBox="0 0 32 32"><path d="M7 16h14m-5-6 6 6-6 6" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>QuickExport Updates</div>
+    <div class="actions">
+      <a class="icon-btn" href="feed.xml" title="Atom feed"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="19" r="2.5"/><path d="M3 10a11 11 0 0 1 11 11h-3a8 8 0 0 0-8-8zm0-6a17 17 0 0 1 17 17h-3A14 14 0 0 0 3 7z"/></svg><span class="lbl">Feed</span></a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle theme">◐<span class="lbl">Theme</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">What's new</div>
+    <h1>QuickExport <span class="v" id="hero-version">…</span></h1>
+    <p id="tagline"></p>
+    <div class="latest" id="hero-meta"></div>
+  </section>
+
+  <div class="controls">
+    <div class="row">
+      <input class="search" id="q" type="search" placeholder="Search updates…" aria-label="Search updates">
+      <div class="seg" role="group" aria-label="Change type" data-key="type">
+        <button aria-pressed="true" data-v="">All</button><button aria-pressed="false" data-v="new">New</button><button aria-pressed="false" data-v="improved">Improved</button><button aria-pressed="false" data-v="fixed">Fixed</button>
+      </div>
+      <div class="seg" role="group" aria-label="Host" data-key="host">
+        <button aria-pressed="true" data-v="">Both</button><button aria-pressed="false" data-v="Blender">Blender</button><button aria-pressed="false" data-v="Maya">Maya</button>
+      </div>
+    </div>
+    <div class="count" id="count"></div>
+  </div>
+
+  <main id="list"></main>
+  <section class="archive" id="archive"></section>
+  <footer>QuickExport · Blender ↔ Maya · <a href="feed.xml">Atom feed</a></footer>
+</div>
+
+<script>
+const LABEL = { new: "New", improved: "Improved", fixed: "Fixed" };
+const state = { q: "", type: "", host: "" };
+let data;
+
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmtDate = d => new Date(d + "T12:00:00").toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+function hl(text) {
+  const t = esc(text);
+  if (!state.q) return t;
+  const rx = new RegExp(state.q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+  return t.replace(rx, m => `<mark>${m}</mark>`);
+}
+
+function matches(item, rel) {
+  if (state.type && item.type !== state.type) return false;
+  if (state.host && !item.hosts.includes(state.host)) return false;
+  if (!state.q) return true;
+  const q = state.q.toLowerCase();
+  return (item.text + " " + rel.title + " " + rel.version).toLowerCase().includes(q);
+}
+
+function render() {
+  let shown = 0, changes = 0;
+  const html = data.releases.map(rel => {
+    const items = rel.items.filter(i => matches(i, rel));
+    if (!items.length) return "";
+    shown++; changes += items.length;
+    const id = "v" + rel.version.replaceAll(".", "-");
+    return `<article class="release" id="${id}">
+      <header><h2><a href="#${id}"><span class="ver">${rel.version}</span>${hl(rel.title)}</a></h2>
+      <time class="date" datetime="${rel.date}">${fmtDate(rel.date)}</time></header>
+      <ul>${items.map(i => `<li><span class="tag ${i.type}">${LABEL[i.type]}</span>
+        <span>${hl(i.text)}<span class="hosts">${i.hosts.map(h => `<span class="host ${h}">${h}</span>`).join("")}</span></span></li>`).join("")}</ul>
+    </article>`;
+  }).join("");
+  document.getElementById("list").innerHTML = html || `<div class="empty">No updates match these filters.</div>`;
+  const filtered = state.q || state.type || state.host;
+  document.getElementById("count").textContent = filtered
+    ? `${changes} change${changes === 1 ? "" : "s"} in ${shown} release${shown === 1 ? "" : "s"}`
+    : `${data.releases.length} recent releases`;
+  document.getElementById("archive").style.display = filtered ? "none" : "";
+}
+
+function renderStatic() {
+  const latest = data.releases[0];
+  document.getElementById("hero-version").textContent = latest.version;
+  document.getElementById("tagline").textContent = data.tagline;
+  const counts = latest.items.reduce((a, i) => (a[i.type] = (a[i.type] || 0) + 1, a), {});
+  document.getElementById("hero-meta").innerHTML =
+    `<span class="pill">Latest · ${fmtDate(latest.date)}</span><span>${esc(latest.title)}</span>` +
+    Object.keys(LABEL).filter(k => counts[k]).map(k => `<span class="tag ${k}" style="padding:2px 8px">${counts[k]} ${LABEL[k]}</span>`).join("");
+  document.getElementById("archive").innerHTML = data.archive.length ? `<h3>Earlier releases</h3>` +
+    data.archive.map(a => `<article class="release"><header><h2><span class="ver">${a.range}</span></h2>
+      <span class="date">${esc(a.dates)}</span></header><p>${esc(a.summary)}</p></article>`).join("") : "";
+}
+
+document.querySelectorAll(".seg").forEach(seg => seg.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  seg.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  state[seg.dataset.key] = b.dataset.v; render();
+}));
+document.getElementById("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+
+const root = document.documentElement;
+try { const t = localStorage.getItem("qe-theme"); if (t) root.dataset.theme = t; } catch {}
+document.getElementById("theme").addEventListener("click", () => {
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("qe-theme", root.dataset.theme); } catch {}
+});
+
+fetch("releases.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+  data = d; renderStatic(); render();
+  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+}).catch(() => { document.getElementById("list").innerHTML = `<div class="empty">Couldn't load releases.</div>`; });
+</script>
+</body>
+</html>
