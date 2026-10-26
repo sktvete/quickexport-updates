@@ -3,6 +3,197 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.587",
+      "date": "2026-10-25",
+      "title": "ZBrush round-trips",
+      "items": [
+        {"type": "fixed", "hosts": ["Blender"], "text": "ZBrush 2026.1 and newer: Install ZBrush Side now puts the QuickExport menu where ZBrush finds it. Reinstall if the menu was missing."},
+        {"type": "improved", "hosts": ["Blender"], "text": "Meshes coming back from ZBrush replace their match directly, so imports are faster. Your Tool is still backed up."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "Parented objects go to ZBrush and back in their parent's space, so hierarchies keep their transforms."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "ZBrush imports keep vertex groups, creases, seams, extra UV maps and UV map names, so modifiers keep working."},
+        {"type": "new", "hosts": ["Blender"], "text": "Keep UVMap option keeps Blender's UVs instead of the ones from ZBrush."}
+      ]
+    },
+    {
+      "version": "4.11.581",
+      "date": "2026-10-23",
+      "title": "Gamma, curves and IES fixes",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Gamma on non-negative colors builds a single node."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "RGB Curves cover the full range of colors that reach them."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "IES light profiles survive temp-folder cleanup on macOS and Linux."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "World Environment Textures keep their interpolation in Arnold."}
+      ]
+    },
+    {
+      "version": "4.11.569",
+      "date": "2026-10-22",
+      "title": "Steadier Maya imports",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Import checks warn instead of failing, and an object that fails is skipped while the rest finish."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "The import progress window stays above the main Maya window."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Extend, Clip and Mirror image extension carry over to Arnold."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Overwriting a scatter updates only its points when that's all that changed."},
+        {"type": "new", "hosts": ["Maya"], "text": "Rec.2020, Display P3 and ACES AP0 working spaces convert correctly."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Point instancers hide their prototype curves so Arnold renders them."}
+      ]
+    },
+    {
+      "version": "4.11.560",
+      "date": "2026-10-22",
+      "title": "Color spaces in any OCIO config",
+      "items": [
+        {"type": "improved", "hosts": ["Blender", "Maya"], "text": "Every image texture carries its color space, matched by meaning even in renamed or custom OCIO configs."},
+        {"type": "improved", "hosts": ["Maya"], "text": "QuickExport never writes a color space your Maya config lacks, and warns when Maya color management is off."},
+        {"type": "new", "hosts": ["Maya"], "text": "The import result lists any color spaces that were substituted."},
+        {"type": "improved", "hosts": ["Maya"], "text": "World HDRIs use the same color space matching."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Image Texture interpolation, including Closest, carries over to Arnold."}
+      ]
+    },
+    {
+      "version": "4.11.548",
+      "date": "2026-10-22",
+      "title": "Shader accuracy pass",
+      "items": [
+        {"type": "fixed", "hosts": ["Maya"], "text": "Legacy Hue/Saturation shifts hue by the right amount."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Displacement Midlevel maps to Arnold's displacement zero value."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Wave, Gradient (Easing, Spherical, Quadratic, Diagonal) and legacy Invert build fewer nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Mapping with linked Rotation, Location or Scale converts to a single matrix."},
+        {"type": "improved", "hosts": ["Maya"], "text": "World color correction folds into the image node."}
+      ]
+    },
+    {
+      "version": "4.11.543",
+      "date": "2026-10-22",
+      "title": "Imports that don't get stuck",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Objects with the same name never block an import; ones that can't be matched import alongside."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Re-importing a package replaces the real previous import, not your duplicates of it."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Children you added in Maya are relocked after they are carried over."},
+        {"type": "improved", "hosts": ["Blender", "Maya"], "text": "Objects with no geometry and no children are no longer transferred."},
+        {"type": "improved", "hosts": ["Maya"], "text": "The QuickExport menu in Maya's top bar is gone; installing removes a leftover one."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Maya runs with a separate profile keep your OCIO config."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "The App Integrations header ignores apps that aren't installed."}
+      ]
+    },
+    {
+      "version": "4.11.531",
+      "date": "2026-10-22",
+      "title": "Smarter re-imports",
+      "items": [
+        {"type": "improved", "hosts": ["Blender", "Maya"], "text": "Imported objects are selected after every import."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Re-importing a World replaces it, keeps your work on it, and names it after the Blender World."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Imports override artist locks and skip only referenced nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Repeat imports replace their previous import, including instanced targets; other instances keep a copy."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Re-exporting a selected armature replaces its rig without deleting objects that weren't exported."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Volume-only materials no longer get a placeholder surface shader."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Imports skip the confirm dialog when nothing would be replaced, and show progress in the main help line."}
+      ]
+    },
+    {
+      "version": "4.11.523",
+      "date": "2026-10-21",
+      "title": "Quicker overwrite dialogs",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "The world overwrite dialog opens straight away, and import popups plan the scene only once."},
+        {"type": "new", "hosts": ["Maya"], "text": "The world overwrite dialog gets Select and Add World."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Overwrites keep children you added in Maya, and you can roll back from the dialog."},
+        {"type": "improved", "hosts": ["Maya"], "text": "A grayscale image plugged into a number input uses Alpha Is Luminance in any color space."}
+      ]
+    },
+    {
+      "version": "4.11.520",
+      "date": "2026-10-21",
+      "title": "No custom Arnold plug-in",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Converted scenes need only standard MtoA; QuickExport no longer ships its own Arnold plug-in."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Normal Map, Bump, Displacement and Voronoi use standard Arnold nodes, and Bump strength now matches Cycles."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Lights convert to standard Maya and Arnold lights."},
+        {"type": "improved", "hosts": ["Maya"], "text": "The QE_World viewport scale defaults to 100."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Meshes with no faces are no longer imported into Maya."}
+      ]
+    },
+    {
+      "version": "4.11.516",
+      "date": "2026-10-21",
+      "title": "Standard Arnold nodes everywhere",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Math, Vector Math, Mix, Noise, Checker, Radial Gradient, Fresnel, Layer Weight, HSV/HSL and Is Camera Ray all convert to standard Maya and Arnold nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Baked volume density uses standard Arnold nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "The Maya overwrite dialog opens faster."},
+        {"type": "improved", "hosts": ["Blender"], "text": "Export Temporary Copies refreshes the scene 6 times instead of 14."}
+      ]
+    },
+    {
+      "version": "4.11.513",
+      "date": "2026-10-21",
+      "title": "Smaller shader graphs",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Texture Coordinate outputs build fewer nodes, and a fixed transform folds into the node that reads it."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Mapping in Vector mode converts, and a Z-rotated UV Mapping into an image becomes a plain place2dTexture."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Gamma and linked Mapping controls are built from standard Maya and Arnold nodes."},
+        {"type": "improved", "hosts": ["Maya"], "text": "A newer export than your Maya side can read now warns instead of blocking."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "NLA-driven objects keep smart key sampling when exporting real keys."}
+      ]
+    },
+    {
+      "version": "4.11.508",
+      "date": "2026-10-21",
+      "title": "Matching color spaces",
+      "items": [
+        {"type": "improved", "hosts": ["Maya"], "text": "Image color spaces map to the equivalent space in your Maya OCIO config, with a warning when it has none."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Legacy ACES 1.2 OCIO configs are recognised."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Unsupported Blender nodes are always skipped on import, so that setting is gone."},
+        {"type": "improved", "hosts": ["Blender"], "text": "FBX exports refresh the scene once at the start."}
+      ]
+    },
+    {
+      "version": "4.11.506",
+      "date": "2026-10-21",
+      "title": "Lighter rig animation",
+      "items": [
+        {"type": "new", "hosts": ["Maya"], "text": "Maya Rigged exports get a Sample Anim option: real keys by default, with per-object frame ranges and smart key reduction."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Editable Rig keeps Blender's own keys and tangents on plain control curves."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Baked FK animation is reduced to fewer keys."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Maya opened by QuickExport keeps your usual Autodesk user settings."}
+      ]
+    },
+    {
+      "version": "4.11.502",
+      "date": "2026-10-20",
+      "title": "Faster exports",
+      "items": [
+        {"type": "improved", "hosts": ["Blender"], "text": "Scene, Editable Rig, ZBrush, Blend to X and World exports refresh the scene once instead of repeatedly."},
+        {"type": "improved", "hosts": ["Blender"], "text": "Subdivision is only toggled on objects the selection actually depends on."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Invert and Multiply/Add nodes right after an image fold into the Maya File node."},
+        {"type": "improved", "hosts": ["Maya"], "text": "A Color Ramp read as a number builds its luminance curve directly."},
+        {"type": "improved", "hosts": ["Maya"], "text": "An image's color plugged into a number input uses Alpha Is Luminance on sRGB and Linear maps."}
+      ]
+    },
+    {
+      "version": "4.11.490",
+      "date": "2026-10-20",
+      "title": "One bad item no longer stops a transfer",
+      "items": [
+        {"type": "fixed", "hosts": ["Blender"], "text": "A light whose node emission can't be read still exports as its base light, with a warning."},
+        {"type": "fixed", "hosts": ["Maya"], "text": "Instances of the same Blender light each get their own Maya light shape."},
+        {"type": "improved", "hosts": ["Blender", "Maya"], "text": "A material that can't convert is left out instead of stopping every other material."},
+        {"type": "improved", "hosts": ["Maya"], "text": "Imports recover from a failed material, and a light or camera that fails to convert keeps its FBX node."},
+        {"type": "improved", "hosts": ["Blender"], "text": "Warnings from individual objects are collected and shown together after export."}
+      ]
+    },
+    {
+      "version": "4.11.486",
+      "date": "2026-10-20",
+      "title": "Clearer export progress",
+      "items": [
+        {"type": "improved", "hosts": ["Blender"], "text": "Export progress shows a Preparing step, and skips the Shaders step when materials are off."},
+        {"type": "improved", "hosts": ["Blender"], "text": "The texture prompt offers Safe Unpack Textures, with clearer hints."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "Open Last Export warns you instead of failing when the export folder is gone."},
+        {"type": "fixed", "hosts": ["Blender"], "text": "Select Overlapping no longer loses the objects it should select."}
+      ]
+    },
+    {
       "version": "4.11.484",
       "date": "2026-10-20",
       "title": "Leaner shader graphs and faster instancers",
