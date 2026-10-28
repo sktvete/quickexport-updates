@@ -3,6 +3,27 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.589",
+      "date": "2026-10-28",
+      "title": "Maya shelf and ZBrush",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "The shelf Import button picks up meshes sent from ZBrush when they are newer than the latest Blender transfer."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "The shelf Export button works in ZBrush mode and uses the ZBrush Export Scale."
+        }
+      ]
+    },
+    {
       "version": "4.11.588",
       "date": "2026-10-28",
       "title": "ZBrush parenting fix",
