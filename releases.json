@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.595",
+      "date": "2026-10-31",
+      "title": "Bug reports from AI assistants",
+      "items": [
+        {
+          "type": "new",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "AI assistants connected to Blender through the QuickExport MCP server can now prepare a bug report the same way the Send Report button does, attach their renders, logs and transfer files, and show you exactly what is inside before anything is sent. Nothing is uploaded until it is explicitly submitted, and an interrupted upload picks up where it stopped."
+        }
+      ]
+    },
+    {
       "version": "4.11.594",
       "date": "2026-10-31",
       "title": "ZBrush side for every version",
