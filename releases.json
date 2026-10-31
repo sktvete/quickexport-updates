@@ -3,6 +3,27 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.5",
+      "date": "2026-10-31",
+      "title": "Review exports with a hidden camera",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "AI-assisted review transfers now export when the scene camera or a light is hidden in the viewport, so the reviewed camera arrives in Maya."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "AI-assisted selection now reports objects Blender could not select because they are hidden or locked."
+        }
+      ]
+    },
+    {
       "version": "4.12.4",
       "date": "2026-10-31",
       "title": "Connect MCP button visible in Maya settings",
