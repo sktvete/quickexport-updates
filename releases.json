@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.596",
+      "date": "2026-10-31",
+      "title": "Display As carries over to Maya",
+      "items": [
+        {
+          "type": "new",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Objects set to Display As Bounds or Wire in Blender (Object Properties > Viewport Display) now show the same way in Maya: as a bounding box or as wireframe. Maya only draws box bounds, so Sphere, Cylinder, Cone and Capsule bounds become a box, with a note in the import warnings."
+        }
+      ]
+    },
+    {
       "version": "4.11.595",
       "date": "2026-10-31",
       "title": "Bug reports from AI assistants",
