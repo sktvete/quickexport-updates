@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.7",
+      "date": "2026-10-31",
+      "title": "AI assistants can frame and capture the ZBrush view",
+      "items": [
+        {
+          "type": "new",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "AI assistants working with ZBrush can now read and change the view: rotate, move and zoom the model, switch perspective, set the focal length or field of view, and frame either all visible SubTools or just the active one. They can also capture the current ZBrush view as an image to check their work."
+        }
+      ]
+    },
+    {
       "version": "4.12.6",
       "date": "2026-10-31",
       "title": "AI assistants can work with ZBrush",
