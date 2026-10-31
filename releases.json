@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.3",
+      "date": "2026-10-31",
+      "title": "Reinstall the ZBrush side with ZBrush open",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Install ZBrush Side no longer fails while ZBrush is running and its QuickExport files are unchanged. If a changed file is in use, the error now tells you to close ZBrush instead of wrongly blaming the ZBrush 2026.0 startup folder."
+        }
+      ]
+    },
+    {
       "version": "4.12.2",
       "date": "2026-10-31",
       "title": "ZBrush 2026.0 install asks for administrator permission",
