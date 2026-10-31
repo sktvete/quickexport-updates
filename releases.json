@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.597",
+      "date": "2026-10-31",
+      "title": "Faster Maya Rigged exports",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Maya Rigged (Editable Rig) exports no longer load every image in the file each time. In scenes with many large textures, exporting a rig or a single object now takes about a second instead of several, and textures the export doesn't use stay unloaded."
+        }
+      ]
+    },
+    {
       "version": "4.11.596",
       "date": "2026-10-31",
       "title": "Display As carries over to Maya",
