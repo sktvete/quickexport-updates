@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.592",
+      "date": "2026-10-31",
+      "title": "Maya ZBrush parenting fix",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Meshes under a moved group or parent no longer shift when sent to ZBrush and back. Grouping a ZBrush import and moving the group keeps it in place too."
+        }
+      ]
+    },
+    {
       "version": "4.11.589",
       "date": "2026-10-28",
       "title": "Maya shelf and ZBrush",
