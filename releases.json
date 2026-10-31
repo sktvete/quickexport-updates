@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.6",
+      "date": "2026-10-31",
+      "title": "AI assistants can work with ZBrush",
+      "items": [
+        {
+          "type": "new",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "AI assistants using QuickExport's MCP server can now start ZBrush in the background, list its SubTools with their point and face counts, and move sculpts between Blender and ZBrush in both directions. Each import shows what it will add or replace first and reports exactly which SubTools were added, replaced or removed. ZBrush runs one copy at a time, so close ZBrush before an assistant starts it; connecting to an open ZBrush is not supported yet."
+        }
+      ]
+    },
+    {
       "version": "4.12.5",
       "date": "2026-10-31",
       "title": "Review exports with a hidden camera",
