@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.4",
+      "date": "2026-10-31",
+      "title": "Connect MCP button visible in Maya settings",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "The Connect MCP and Disconnect MCP buttons in Quick Export Settings > Advanced were hidden behind Save Settings. They now show at the bottom of Advanced with the connection status on its own line, and the settings window is a bit more compact."
+        }
+      ]
+    },
+    {
       "version": "4.12.3",
       "date": "2026-10-31",
       "title": "Reinstall the ZBrush side with ZBrush open",
