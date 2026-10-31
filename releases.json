@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.2",
+      "date": "2026-10-31",
+      "title": "ZBrush 2026.0 install asks for administrator permission",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Install ZBrush Side on ZBrush 2026.0 now shows the Windows administrator prompt when ZBrush's startup file can't be changed, instead of stopping with an error. Accept it once and the install finishes; ZBrush 2026.1+ never needs it."
+        }
+      ]
+    },
+    {
       "version": "4.12.1",
       "date": "2026-10-31",
       "title": "Python scripts from AI assistants in Blender",
