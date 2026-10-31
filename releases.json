@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.11.593",
+      "date": "2026-10-31",
+      "title": "ZBrush install fix",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Install ZBrush Side works when more than one ZBrush version is installed: it picks the asset folder that belongs to the ZBrush it installs into"
+        }
+      ]
+    },
+    {
       "version": "4.11.592",
       "date": "2026-10-31",
       "title": "Maya ZBrush parenting fix",
