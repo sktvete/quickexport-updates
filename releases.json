@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.9",
+      "date": "2026-11-01",
+      "title": "Rough noise keeps its grain in Maya",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Noise Textures with high Roughness now keep their fine grain in Arnold instead of turning into soft, blurry blobs. The large shapes come out a little smaller, and the network is still a single noise node."
+        }
+      ]
+    },
+    {
       "version": "4.12.8",
       "date": "2026-11-01",
       "title": "AI assistants can carry views between ZBrush, Blender and Maya",
