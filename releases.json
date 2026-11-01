@@ -3,6 +3,27 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.11",
+      "date": "2026-11-01",
+      "title": "Scenes with Geometry Nodes scatters transfer to Maya again",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Exporting a scene that contains a Geometry Nodes scatter to Maya no longer fails partway through. Scattered pieces now follow their object's Viewport Display As setting, so a Bounds or Wire scatter object draws the same way in Maya."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "A display or subdivision hint that can't be read, such as conflicting subdivision scheme custom properties, no longer stops the export. That one setting is skipped and listed in a warning, and everything else transfers as usual."
+        }
+      ]
+    },
+    {
       "version": "4.12.10",
       "date": "2026-11-01",
       "title": "Strongly distorted noise matches Blender more closely",
