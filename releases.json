@@ -3,6 +3,27 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.27",
+      "date": "2026-11-01",
+      "title": "QuickExport is now a Blender extension",
+      "items": [
+        {
+          "type": "new",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "QuickExport now installs as a Blender extension instead of a legacy add-on. Install it from Get Extensions with Install from Disk, and Blender manages its folder from then on."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Update now installs new versions through Blender's extension system and restarts Blender. Updating an older add-on install from version 4.12.25 or later switches it to the extension in one click and keeps your preferences and shortcut."
+        }
+      ]
+    },
+    {
       "version": "4.12.17",
       "date": "2026-11-01",
       "title": "Check for Update finds the right build on Linux and macOS",
