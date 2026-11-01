@@ -3,6 +3,34 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.31",
+      "date": "2026-11-01",
+      "title": "No more security prompt when you quit Maya",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Quitting Maya after a QuickExport import no longer opens the Secure UserSetup Checksum verification dialog, and updating QuickExport no longer brings it back."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Blender no longer lists policy warnings for QuickExport in Preferences, and updating the extension while QuickExport is loaded replaces it cleanly."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The QuickExport panel in the 3D View sidebar shows its version as 4.12.31 instead of (4, 12, 31)."
+        }
+      ]
+    },
+    {
       "version": "4.12.27",
       "date": "2026-11-01",
       "title": "QuickExport is now a Blender extension",
