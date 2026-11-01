@@ -3,6 +3,21 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.8",
+      "date": "2026-11-01",
+      "title": "AI assistants can carry views between ZBrush, Blender and Maya",
+      "items": [
+        {
+          "type": "new",
+          "hosts": [
+            "Blender",
+            "Maya"
+          ],
+          "text": "AI assistants can now turn the current ZBrush view into a Blender or Maya camera that sees the model the same way, including perspective, focal length and orthographic views. It works the other way too: a Blender or Maya camera can set the ZBrush view, so you can sculpt from the exact shot you are rendering."
+        }
+      ]
+    },
+    {
       "version": "4.12.7",
       "date": "2026-10-31",
       "title": "AI assistants can frame and capture the ZBrush view",
