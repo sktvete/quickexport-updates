@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.10",
+      "date": "2026-11-01",
+      "title": "Strongly distorted noise matches Blender more closely",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Noise Textures with a Distortion above 0.5 no longer come out over-distorted in Arnold, so their warp and fine detail stay closer to Blender. Lower Distortion values look the same as before, and the network is still a single noise node."
+        }
+      ]
+    },
+    {
       "version": "4.12.9",
       "date": "2026-11-01",
       "title": "Rough noise keeps its grain in Maya",
