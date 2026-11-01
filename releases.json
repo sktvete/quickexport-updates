@@ -3,6 +3,34 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.17",
+      "date": "2026-11-01",
+      "title": "Check for Update finds the right build on Linux and macOS",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "On Linux and macOS, Check for Update now offers the release built for your system instead of the Windows one."
+        }
+      ]
+    },
+    {
+      "version": "4.12.16",
+      "date": "2026-11-01",
+      "title": "Displaced meshes keep their shape and render faster in Maya",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Meshes with true displacement no longer get four extra subdivision levels in Arnold. They now use the Subdivision Surface modifier's viewport level, or no subdivision when there is none, so their shape matches Cycles and heavy meshes render much faster with far less GPU memory."
+        }
+      ]
+    },
+    {
       "version": "4.12.11",
       "date": "2026-11-01",
       "title": "Scenes with Geometry Nodes scatters transfer to Maya again",
