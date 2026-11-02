@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.33",
+      "date": "2026-11-02",
+      "title": "World HDRI images are found like textures",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "World HDRI images are found the same way as material textures, so the environment map comes across with the scene."
+        }
+      ]
+    },
+    {
       "version": "4.12.32",
       "date": "2026-11-02",
       "title": "IK keeps working on animated partial rigs",
