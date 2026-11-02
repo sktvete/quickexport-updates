@@ -3,6 +3,27 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.34",
+      "date": "2026-11-02",
+      "title": "ZBrush sculpts replace rigged meshes",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "ZBrush import now replaces rigged and deformed meshes (Armature, Mesh Deform, Surface Deform, Multires) instead of refusing them. The sculpt lands on the rest mesh and keeps its weights; Ctrl+Z undoes it."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "ZBrush export and import work on skinned and blendshaped meshes: the sculpt goes to the original shape under the deformers, so the rig keeps working. Meshes with plain construction history are replaced too; Undo restores them."
+        }
+      ]
+    },
+    {
       "version": "4.12.33",
       "date": "2026-11-02",
       "title": "World HDRI images are found like textures",
