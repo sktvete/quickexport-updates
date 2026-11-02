@@ -3,6 +3,35 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.37",
+      "date": "2026-11-02",
+      "title": "ZBrush sculpts transfer as pure mesh data",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender",
+            "Maya"
+          ],
+          "text": "ZBrush export and import carry only the mesh itself. The object's own and its parents' transforms are never baked into the vertices, so moved, rotated or parented objects keep their transform and hierarchy and only the mesh changes."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "ZBrush imports keep smooth shading instead of coming back flat. New and remeshed meshes are smooth; with unchanged topology, faces you set flat stay flat."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "ZBrush imports are soft-edged by default, and with unchanged topology your hard edges are kept."
+        }
+      ]
+    },
+    {
       "version": "4.12.34",
       "date": "2026-11-02",
       "title": "ZBrush sculpts replace rigged meshes",
