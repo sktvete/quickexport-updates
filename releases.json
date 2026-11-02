@@ -3,6 +3,27 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.32",
+      "date": "2026-11-02",
+      "title": "IK keeps working on animated partial rigs",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Editable Rig: exporting a rig with Export Supported Parts and Include Animation no longer turns off its IK in Maya. Only the bones moved by the unsupported constraints or drivers get baked keys; supported IK and constraints stay live, so you can still pose the IK controls."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The Unsupported Features dialog now says how many bones will be baked and which IK or constraints, if any, are baked with them."
+        }
+      ]
+    },
+    {
       "version": "4.12.31",
       "date": "2026-11-01",
       "title": "No more security prompt when you quit Maya",
