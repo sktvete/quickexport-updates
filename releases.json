@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.40",
+      "date": "2026-11-06",
+      "title": "Never revert setting sticks",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Never revert a failed import now stays set after Maya restarts or crashes."
+        }
+      ]
+    },
+    {
       "version": "4.12.39",
       "date": "2026-11-06",
       "title": "Re-import after deleting a rig",
