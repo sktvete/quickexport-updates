@@ -3,6 +3,34 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.39",
+      "date": "2026-11-06",
+      "title": "Re-import after deleting a rig",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Re-importing after deleting a rig or its meshes in Maya no longer fails; the rig is written fresh."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Repeat imports of a selected rig with its meshes keep their skinning."
+        },
+        {
+          "type": "new",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "New option: Never revert a failed import. The error is still reported, and whatever finished stays in the scene."
+        }
+      ]
+    },
+    {
       "version": "4.12.38",
       "date": "2026-11-03",
       "title": "Faster ZBrush shading carry-over",
