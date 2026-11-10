@@ -3,6 +3,34 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.42",
+      "date": "2026-11-10",
+      "title": "Smoke, steam and haze reach Maya",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Volume objects (Mesh to Volume, VDB) keep their Principled Volume material in Maya NPZ transfers, so white steam and smoke no longer render black in Arnold."
+        },
+        {
+          "type": "new",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Volume Scatter and Volume Absorption materials become Arnold volumes, so a haze box around the camera stays haze instead of turning into a solid grey box."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Large constant-density volumes such as fog boxes render much faster in Arnold, with the same result."
+        }
+      ]
+    },
+    {
       "version": "4.12.41",
       "date": "2026-11-06",
       "title": "Never revert moved to settings",
