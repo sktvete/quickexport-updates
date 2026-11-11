@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.43",
+      "date": "2026-11-11",
+      "title": "Subdivision survives partial Editable Rig imports",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Sending only some objects with Maya Editable Rig into a scene that already holds others from the same Blender file now keeps each mesh's Subdivision Surface, so Arnold renders it smooth instead of as the base cage."
+        }
+      ]
+    },
+    {
       "version": "4.12.42",
       "date": "2026-11-10",
       "title": "Smoke, steam and haze reach Maya",
