@@ -3,6 +3,41 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.48",
+      "date": "2026-11-23",
+      "title": "Clean-up",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Bug reports follow Blender's Allow Online Access setting, and the dialog says that logs include file paths."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The Connect MCP button says that a connected session can run Python."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The Check for Update button is gone. Install new versions from disk."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "A short README in the ZIP explains installation, files outside Blender and network use."
+        }
+      ]
+    },
+    {
       "version": "4.12.47",
       "date": "2026-11-23",
       "title": "Readable source, one ZIP for every system",
