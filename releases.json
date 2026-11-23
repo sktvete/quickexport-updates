@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.46",
+      "date": "2026-11-23",
+      "title": "New ZBrush export icon in Maya",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "The Quick Export shelf button has a new, flatter icon for ZBrush mode. Double-click still switches between Blender and ZBrush."
+        }
+      ]
+    },
+    {
       "version": "4.12.45",
       "date": "2026-11-23",
       "title": "Maya NPZ keeps the UV sets your materials use",
