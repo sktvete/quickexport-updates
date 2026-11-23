@@ -3,6 +3,63 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.47",
+      "date": "2026-11-23",
+      "title": "Readable source, one ZIP for every system",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender",
+            "Maya"
+          ],
+          "text": "QuickExport now ships as readable Python source under GPL-3.0-or-later. One 3 MB ZIP works on Windows, macOS and Linux. Blender 5.2 or newer is required."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Repeat exports in a session are faster. The first export of a session takes a moment longer."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The bug report no longer includes your selection unless you tick it."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The 180cm Man is a new, lighter figure from Blender's Human Base Meshes."
+        },
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "New shelf icons for Quick Import and Quick Export."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "Cancelling the bug report dialog no longer raises an error."
+        },
+        {
+          "type": "fixed",
+          "hosts": [
+            "Blender"
+          ],
+          "text": "The Editable Rig dialog shows its separators correctly."
+        }
+      ]
+    },
+    {
       "version": "4.12.46",
       "date": "2026-11-23",
       "title": "New ZBrush export icon in Maya",
