@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.45",
+      "date": "2026-11-23",
+      "title": "Maya NPZ keeps the UV sets your materials use",
+      "items": [
+        {
+          "type": "fixed",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "With Remove Non-Active Render UV on, NPZ transfers keep every UV set the materials read, so textures on a second UV set land in the right place in Maya."
+        }
+      ]
+    },
+    {
       "version": "4.12.43",
       "date": "2026-11-11",
       "title": "Subdivision survives partial Editable Rig imports",
