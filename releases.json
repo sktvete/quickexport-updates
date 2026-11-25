@@ -3,6 +3,20 @@
   "tagline": "One-click Blender ↔ Maya transfers that keep your materials, geometry and hierarchy intact.",
   "releases": [
     {
+      "version": "4.12.49",
+      "date": "2026-11-25",
+      "title": "Shelf icons",
+      "items": [
+        {
+          "type": "improved",
+          "hosts": [
+            "Maya"
+          ],
+          "text": "Quick Import and Quick Export have their original shelf icons back."
+        }
+      ]
+    },
+    {
       "version": "4.12.48",
       "date": "2026-11-23",
       "title": "Clean-up",
